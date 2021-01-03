@@ -8,8 +8,8 @@ import LongestCommonPrefix from './components/longestCommonPrefix';
 // 有效括号
 import isValid from './components/isValid';
 
-// 链表（合并、反转）
-import { mergeTwoLists, ReverseList, changeList, listAdd, listAddNot } from './components/List';
+// 链表（合并、反转、相加、两两交换）
+import { mergeTwoLists, reverseList, changeList, listAdd, listAddNot } from './components/List';
 import { LinkedList } from './components/List/creatListClass';
 
 function App () {
@@ -24,8 +24,8 @@ function App () {
       <p>链表2:{linkList2.toString()}</p>
 
       <hr />
-      <p>链表1反转：{ReverseList(linkList1.head).toString()}</p>
-      <p>链表2反转：{ReverseList(linkList2.head).toString()}</p>
+      <p>链表1反转：{reverseList(linkList1.head).toString()}</p>
+      <p>链表2反转：{reverseList(linkList2.head).toString()}</p>
 
       <hr />
       <p>链表1两两交换：{changeList(linkList1).toString()}</p>
