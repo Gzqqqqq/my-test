@@ -19,7 +19,7 @@ export class LinkedList {
     this.head = headNode || null;
   }
 
-  // 添加节点single
+  // 添加节点single  append时间复杂度==getElementAt的复杂度 O(n)
   append = (element) => {
     let node = new ListNode(element);
     // 当前列表为空，直接添加到head后面
@@ -48,14 +48,14 @@ export class LinkedList {
     return true;
   }
 
-  // 批量添加数组：
+  // 批量添加数组：   O(n*m)
   appendArr = (eleArr) => {
     eleArr.forEach(item => {
       this.append(item);
     });
   }
 
-  // 指定位置插入single
+  // 指定位置插入single   O(n)
   insert = (element, position) => {
     if (position < 0 || position > this.length) {
       return null;
@@ -96,7 +96,7 @@ export class LinkedList {
     return true;
   }
 
-  // 指定位置删除single
+  // 指定位置删除single   O(n)
   removeAt = (position) => {
     if (position < 0 || position > this.length) {
       return null;
@@ -134,13 +134,13 @@ export class LinkedList {
     return current;
   }
 
-  // 删除指定元素
+  // 删除指定元素   O(n)
   removeEle = (element) => {
     let position = this.indexOf(element);
     return this.removeAt(position);
   }
 
-  // 返回指定元素下标
+  // 返回指定元素下标  O(n)
   indexOf = (element) => {
     let current = this.head;
 
@@ -154,7 +154,7 @@ export class LinkedList {
     return -1
   }
 
-  // 返回指定下标元素
+  // 返回指定下标元素  getElementAt的时间复杂度为O(n)
   getElementAt = (position) => {
     if (position < 0 || position > this.length) {  // 超出下标
       return null;
@@ -168,28 +168,28 @@ export class LinkedList {
     return current;
   }
 
-  // 判断链表是否为空
+  // 判断链表是否为空  O(1)
   isEmpty = () => {
     return this.length === 0;
   }
 
-  // 返回链表个数
+  // 返回链表个数  O(1)
   size = () => {
     return this.length;
   }
 
-  // 返回链接头部
+  // 返回链接头部   O(1)
   getHead = () => {
     return this.head;
   }
 
-  // 清空链表
+  // 清空链表  O(1)
   clear = () => {
     this.head = null;
     this.length = 0;
   }
 
-  // 指定格式输出链表元素
+  // 指定格式输出链表元素  O(n)
   toString = () => {
     let current = this.head;
     let s = '';
@@ -201,7 +201,7 @@ export class LinkedList {
     return s;
   }
 
-  // 更新指定位置元素
+  // 更新指定位置元素  O(n)
   updateList = (position, element) => {
     // 指定位置删除，再新增
     this.removeAt(position);

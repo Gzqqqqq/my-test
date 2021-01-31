@@ -36,6 +36,7 @@ export const mergeTwoLists = (l1, l2, isConsole = false) => {
 * @param {boolean} isConsole
 * @return {LinkedList}
 */
+// O(n2)
 export const reverseList = (l1, isConsole = false) => {
   let cur = new LinkedList();
   while (l1) {
@@ -54,6 +55,7 @@ export const reverseList = (l1, isConsole = false) => {
 * @param {boolean} isConsole
 * @return {LinkedList}
 */
+// O(n2)
 export const changeList = (l1, isConsole = false) => {
   // 方法一：
   // for (let i = 0; i < l1.length; i++) {
@@ -89,6 +91,7 @@ export const changeList = (l1, isConsole = false) => {
 * @param {boolean} isConsole
 * @return {LinkedList}
 */
+// O(n2)
 export const listAddNot = (l1, l2, isConsole = false) => {
   let newList = new LinkedList();
   let reverseL1 = reverseList(l1.head);
